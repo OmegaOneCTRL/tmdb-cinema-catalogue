@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c10">
+  <title>CinéScope — Films & séries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="CinéScope accueil"><span class="brand-mark">C</span><span>Ciné<span class="accent">Scope</span></span></a>
+    <nav aria-label="Navigation principale"><a class="nav-link active" href="#home">Découvrir</a><a class="nav-link" href="#movies">Films</a><a class="nav-link" href="#tv">Séries</a></nav>
+    <form id="search-form" role="search"><input id="search-input" type="search" placeholder="Rechercher un titre…" aria-label="Rechercher un titre"><button aria-label="Rechercher" type="submit">⌕</button></form>
+  </header>
+  <main id="home">
+    <section id="hero" class="hero"><div class="hero-shade"></div><div class="hero-copy"><p class="eyebrow">VOTRE PROCHAIN COUP DE CŒUR</p><h1>Le cinéma,<br><span>à découvrir.</span></h1><p class="hero-desc">Explorez les films et les séries qui font parler d'eux.</p><a class="button primary" href="#trending">Explorer les tendances <span>→</span></a></div><div class="hero-note">Des histoires qui restent.</div></section>
+    <section class="content-section" id="trending"><div class="section-heading"><div><p class="eyebrow">À L'AFFICHE</p><h2>Tendances <span>du moment</span></h2></div><div class="tabs" role="group" aria-label="Type de contenus"><button class="tab selected" data-kind="movie">Films</button><button class="tab" data-kind="tv">Séries</button></div></div><div class="status" id="status" aria-live="polite"></div><div id="results" class="poster-grid"></div></section>
+    <section class="content-section genre-section"><div class="section-heading"><div><p class="eyebrow">À VOTRE GOÛT</p><h2>Choisissez votre <span>ambiance</span></h2></div></div><div id="genres" class="genre-list"></div></section>
+    <section class="content-section search-section" id="movies"><div class="section-heading"><div><p class="eyebrow">À VOUS DE JOUER</p><h2>Votre prochaine <span>découverte</span></h2></div></div><p class="muted">Recherchez un film ou une série par son titre avec la barre en haut de la page.</p></section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-mark">C</span><span>Ciné<span class="accent">Scope</span></span></a><p>Un catalogue pour les amoureux du cinéma.</p><p class="legal">Les métadonnées et images de ce produit proviennent de TMDB. Ce produit n'est ni approuvé ni certifié par TMDB. Les informations sont fournies à titre indicatif.</p></footer>
+  <dialog id="details" aria-labelledby="detail-title"><button class="close" aria-label="Fermer">×</button><div id="detail-content"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
